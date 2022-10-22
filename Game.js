@@ -87,10 +87,15 @@ class Game {
      * Elimina al oponente del juego
      */
     removeOpponent () {
-        if (this.opponent) {
+        if (this.opponent instanceof Boss) {
             document.body.removeChild(this.opponent.image);
+            this.endGame();
+        }else if (this.opponent instanceof Opponent) {
+            document.body.removeChild(this.opponent.image);
+            this.opponent = new Boss(this);
+        }else{
+            this.opponent = new Opponent(this);
         }
-        this.opponent = new Opponent(this);
     }
 
     /**
@@ -207,9 +212,16 @@ class Game {
      * Termina el juego
      */
     endGame () {
-        this.ended = true;
-        let gameOver = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, GAME_OVER_PICTURE)
-        gameOver.render();
+      if (this.player.lives > 0) { // Si el jugador está vivo (al menos 1 vida), gana la partida.
+            this.ended = true;
+            let youWin = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, YOU_WIN_PICTURE)
+            youWin.render();
+            
+        }else { // Si está muerto (0 vidas), pierde la partida.
+            this.ended = true;
+            let gameOver = new Entity(this, this.width / 2, "auto", this.width / 4, this.height / 4, 0, GAME_OVER_PICTURE)
+            gameOver.render();   
+        }
     }
 
     /**

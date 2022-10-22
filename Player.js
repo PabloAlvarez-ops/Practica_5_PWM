@@ -17,6 +17,8 @@ class Player extends Character {
             myImageDead = PLAYER_PICTURE_DEAD;
 
         super(game, width, height, x, y, speed, myImage, myImageDead);
+        // Vidas del jugador 
+        this.lives = LIVES;
     }
 
     /**

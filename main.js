@@ -1,9 +1,10 @@
 const OPPONENT_HEIGHT = 5,
     OPPONENT_PICTURE = "assets/malo.png",
     OPPONENT_PICTURE_DEAD = "assets/malo_muerto.png",
-    OPPONENT_SPEED = 5,
+    OPPONENT_SPEED = 5, //La velocidad del boss deberá ser el doble a la del oponente
     OPPONENT_WIDTH = 5,
     GAME_OVER_PICTURE = "assets/game_over.png",
+    YOU_WIN_PICTURE = "assets/you_win.png"
     KEY_LEFT = "LEFT",
     KEY_RIGHT = "RIGHT",
     KEY_SHOOT = "SHOOT",
@@ -19,6 +20,10 @@ const OPPONENT_HEIGHT = 5,
     SHOT_PICTURE_OPPONENT = "assets/shot2.png",
     SHOT_WIDTH = 1.5,
     LIVES = 3;
+    BOSS_SPEED = 10,
+    BOSS_PICTURE = "assets/jefe.png",
+    BOSS_PICTURE_DEAD = "assets/jefe_muerto.png";
+
 
 function getRandomNumber (range) {
     return Math.floor(Math.random() * range);
