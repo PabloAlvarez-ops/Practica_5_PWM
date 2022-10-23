@@ -2,10 +2,12 @@ html {
   overflow: hidden;
 }
 
-.Opponent {
+/* En este caso, no quiero que el oponente vaya girando sobre su eje, para poder apreciar mejor la imágen.  */
+
+/* .Opponent {
 	animation: rotation 3s infinite linear;
 	-webkit-animation: rotation 3s infinite linear;
-}
+} */
 
 .paused .Opponent {
 	animation: none;
@@ -25,10 +27,14 @@ html {
 
 .gamebutton {
 	border: none;
-	background: #ddd;
-	color: #333;
+	background: #1F618D;
+	color: #F4D03F;
 	padding: 10px 20px;
 	outline: none;
-	font-family: monospace;
+	font-family: sans-serif;
 	cursor: pointer;
+}
+
+body {
+  background-color: #FADBD8;
 }
