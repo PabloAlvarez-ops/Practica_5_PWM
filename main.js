@@ -20,7 +20,7 @@ KEY_LEFT = "LEFT",
   SHOT_PICTURE_OPPONENT = "assets/fireballPurple.png",
   SHOT_WIDTH = 3, //1.5 
   LIVES = 3;
-BOSS_SPEED = 10,
+  BOSS_SPEED = 10,
   BOSS_PICTURE = "assets/pekka_ALIVE.png",
   BOSS_PICTURE_DEAD = "assets/pekka_DEAD.png";
 
