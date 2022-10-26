@@ -269,5 +269,6 @@ class Game {
       document.getElementById("scoreli").innerHTML = `Score: ${this.score}`;
       // let lives = document.getElementById("livesli");
       document.getElementById("livesli").innerHTML = `Lives: ${this.player.lives}`;
+      document.getElementById("Audio").volume = 0.1;
     }
 }
